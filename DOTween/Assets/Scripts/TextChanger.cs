@@ -10,6 +10,6 @@ public class TextChanger : MonoBehaviour
     {
         _text.DOColor(Color.green, 4);
         _text.DOColor(Color.gray, 4).SetDelay(4);
-        _text.DOText("Новый текст", 3, true, ScrambleMode.All).SetDelay(4);
+        _text.DOText("New text", 3, true, ScrambleMode.All).SetDelay(4);
     }
 }
