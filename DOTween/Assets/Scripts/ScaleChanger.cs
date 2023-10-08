@@ -3,9 +3,7 @@ using DG.Tweening;
 
 public class ScaleChanger : MonoBehaviour
 {
-    [SerializeField] private float _xComponent;
-    [SerializeField] private float _yComponent;
-    [SerializeField] private float _zComponent;
+    [SerializeField] private Vector3 _endScaleValue;
     [SerializeField] private float _duration;
 
     private int _loopsCount;
@@ -13,6 +11,6 @@ public class ScaleChanger : MonoBehaviour
     private void Start()
     {
         _loopsCount = -1;
-        transform.DOScale(new Vector3(_xComponent, _yComponent, _zComponent), _duration).SetLoops(_loopsCount, LoopType.Yoyo);
+        transform.DOScale(_endScaleValue, _duration).SetLoops(_loopsCount, LoopType.Yoyo);
     }
 }
